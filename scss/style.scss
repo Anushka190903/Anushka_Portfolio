@@ -28,31 +28,26 @@ $secondary: #a0f669;
 }
 
 html {
-	// overflow-x: hidden;
+  overflow-x: hidden;
 }
-body {
-	font-family: $font-primary;
-	background: $black;
-	font-size: 16px;
-	line-height: 1.8;
-	font-weight: 400;
-	color: lighten($black,60%);
-	&.menu-show {
-		overflow: hidden;
-		position: fixed;
-		height: 100%;
-		width: 100%;
-	}
+body{
+	overflow-x: hidden;
+  overflow-y: auto;
+
+  font-family: 'YourFontName'; /* Replace with actual font */
+  background: #000000;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999999; /* Replace with lighten($black, 60%) */
+  overflow-y: auto;
+  scrollbar-width: none !important;
 }
-a {
-	transition: .3s all ease;
-	color: $primary;
-	&:hover, &:focus {
-		text-decoration: none;
-		color: $primary;
-		outline: none !important;
-	}
+
+body::-webkit-scrollbar {
+  display: none !important;
 }
+
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
 	line-height: 1.5;
@@ -367,7 +362,7 @@ h1, h2, h3, h4, h5,
 	}
 	.owl-dots {
 		text-align: center;
-		.owl-dot {
+		owl-dot {
 			width: 10px;
 			height: 10px;
 			margin: 5px;
@@ -1985,4 +1980,25 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+
+// Hide scrollbars globally but allow scrolling
+* {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important;    /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none !important;            /* Chrome, Safari, Opera */
+  width: 0 !important;
+  background: transparent !important;
+}
+html, body {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  background: transparent !important;
 }

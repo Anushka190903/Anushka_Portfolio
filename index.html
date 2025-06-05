@@ -189,8 +189,8 @@
 			            <h2>A Software Developer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/anushka-bhattacharya-4375b831b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/Anushka190903" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+			            <p><a href="https://www.linkedin.com/in/anushka-bhattacharya-4375b831b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/Anushka190903" target="_blank" rel="noopener noreferrer"class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -543,6 +543,7 @@
 		  </div>
 		</div>
 	  </footer>
+	
 
 
   <!-- loader -->
@@ -564,5 +565,19 @@
   
   <script src="js/main.js"></script>
     
+  <script>
+  // Hide overlay scrollbars in Chrome/Edge (Windows)
+  document.addEventListener("DOMContentLoaded", function() {
+    document.documentElement.style.scrollbarWidth = "none";
+    document.body.style.scrollbarWidth = "none";
+    // For Webkit browsers
+    let style = document.createElement('style');
+    style.innerHTML = `
+      ::-webkit-scrollbar { display: none !important; width: 0 !important; background: transparent !important; }
+    `;
+    document.head.appendChild(style);
+  });
+  </script>
+
   </body>
 </html>
